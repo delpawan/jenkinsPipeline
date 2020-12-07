@@ -17,8 +17,8 @@ pipeline {
         }
 
         stage('Test Logs') {
-          environment{
-            LocalVariable = "Local Variable."
+          environment {
+            LocalVariable = 'Local Variable.'
           }
           steps {
             writeFile(file: 'logtestfile.txt', text: "This is test log file. Chrome Driver path: ${ChromeDriverPath} and local variable value: ${LocalVariable}")
